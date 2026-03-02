@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -5,13 +6,14 @@ public class storeupgrtade : MonoBehaviour
 {
     public TMP_Text pricetext;
     public TMP_Text incomeinfotext;
-    
+   
    public GameManager gamemanager;
 
     public int startprice = 10;
     public float upgradePriceMultiplyer = 1.5f;
-    public float rocksPerupgrade = 0.1f;
+    public float rocksPerupgrade = 1.0f;
     int levle = 0;
+    public bool active;
 
     private int CalculatePrice()
     {
@@ -26,6 +28,13 @@ public class storeupgrtade : MonoBehaviour
     private void Start()
     {
         updateui();
+    }
+    public void Update()
+    {
+        if (active)
+        {
+            Drill();
+        }
     }
 
     void updateui()
@@ -44,10 +53,30 @@ public class storeupgrtade : MonoBehaviour
             levle++;
             updateui();
         }
+    }
 
-            
+    public void ActivateDrill()
+    {
+        if (!active)
+        {
+            active = true;
+            StartCoroutine(DelayedCounter());
+        }
+    }
+    public void Drill()
+    {
+        StartCoroutine(Drilling());
+    }
 
-
+    IEnumerator DelayedCounter()
+    {
+        yield return new WaitForSeconds(10f);
+        active = false;
+    }
+    IEnumerator Drilling()
+    {
+        yield return new WaitForSeconds(1f);
+        gamemanager.count++;
     }
 
 }
