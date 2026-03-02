@@ -10,7 +10,7 @@ public class storeupgrtade : MonoBehaviour
    public GameManager gamemanager;
 
     public int startprice = 10;
-    public float upgradePriceMultiplyer = 1.5f;
+    public float upgradePriceMultiplyer = 1.25f;
     public float rocksPerupgrade = 1.0f;
     int levle = 0;
     public bool active;
@@ -57,26 +57,37 @@ public class storeupgrtade : MonoBehaviour
 
     public void ActivateDrill()
     {
-        if (!active)
-        {
-            active = true;
-            StartCoroutine(DelayedCounter());
-        }
+
+        StartCoroutine(DelayedCounter());
     }
     public void Drill()
     {
+        active = true;
         StartCoroutine(Drilling());
     }
 
     IEnumerator DelayedCounter()
     {
         yield return new WaitForSeconds(10f);
+        Debug.Log("working");
         active = false;
     }
     IEnumerator Drilling()
     {
-        yield return new WaitForSeconds(1f);
-        gamemanager.count++;
+        ActivateDrill();
+        Debug.Log("worked");
+        do
+        {
+            yield return new WaitForSeconds(1f);
+            Debug.Log("works");
+            gamemanager.count++;
+            gamemanager.UpdateUI();
+            
+        } while (active);
+
+
+
+
     }
 
 }

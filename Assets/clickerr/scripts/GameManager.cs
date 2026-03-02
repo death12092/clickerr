@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] int updatespersec = 5;
-    [SerializeField] float count = 0;
+    [SerializeField] public float count = 0;
     [SerializeField] TMP_Text counttext;
     float nexttimecheck = 1f;
     [SerializeField] storeupgrtade[] storeupgrade;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    private void UpdateUI()
+    public void UpdateUI()
     {
         counttext.text = Mathf.RoundToInt(count).ToString() + " : rocks";
     }
