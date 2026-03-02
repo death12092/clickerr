@@ -31,10 +31,7 @@ public class storeupgrtade : MonoBehaviour
     }
     public void Update()
     {
-        if (active)
-        {
-            Drill();
-        }
+        
     }
 
     void updateui()
@@ -68,9 +65,14 @@ public class storeupgrtade : MonoBehaviour
 
     IEnumerator DelayedCounter()
     {
-        yield return new WaitForSeconds(10f);
+        float activetime = 9f;
+        yield return new WaitForSeconds(activetime);
         Debug.Log("working");
         active = false;
+        if(levle >= 20)
+        {
+            activetime = activetime + 10;
+        }
     }
     IEnumerator Drilling()
     {
@@ -80,7 +82,7 @@ public class storeupgrtade : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             Debug.Log("works");
-            gamemanager.count++;
+            gamemanager.count = gamemanager.count + levle;
             gamemanager.UpdateUI();
             
         } while (active);
