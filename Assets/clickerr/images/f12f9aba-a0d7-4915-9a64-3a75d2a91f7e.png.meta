@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bea1ecc14718bf042b0705329baf60f6
+guid: 399bd089b460e7149b086127121ac35a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1652985515664649637
-    second: vecteezy_an-8-bit-retro-styled-pixel-art-illustration-of-a-golden-drill_19797305_0
+      213: 2606705352767731099
+    second: f12f9aba-a0d7-4915-9a64-3a75d2a91f7e_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vecteezy_an-8-bit-retro-styled-pixel-art-illustration-of-a-golden-drill_19797305_0
+      name: f12f9aba-a0d7-4915-9a64-3a75d2a91f7e_0
       rect:
         serializedVersion: 2
-        x: 811
+        x: 0
         y: 0
-        width: 2315
-        height: 3939
+        width: 1024
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5251ff6e6a6f09e0800000000000000
-      internalID: -1652985515664649637
+      spriteID: b9574d915b0ec2420800000000000000
+      internalID: 2606705352767731099
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vecteezy_an-8-bit-retro-styled-pixel-art-illustration-of-a-golden-drill_19797305_0: -1652985515664649637
+      f12f9aba-a0d7-4915-9a64-3a75d2a91f7e_0: 2606705352767731099
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

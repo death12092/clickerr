@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9ae1004620349594c817c154e1323a6e
+guid: 98c25c469aa903647b8b5c8272a64f32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2567422538402743432
-    second: pixel-art-pickaxe-illustration-for-retro-game-design-vector_0
+      213: 4761120676506112107
+    second: 983701b3-0596-4592-9f22-0cb5cef8519a_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixel-art-pickaxe-illustration-for-retro-game-design-vector_0
+      name: 983701b3-0596-4592-9f22-0cb5cef8519a_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 980
-        height: 980
+        width: 1024
+        height: 1536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87b3c2addceae5cd0800000000000000
-      internalID: -2567422538402743432
+      spriteID: b601aef9706e21240800000000000000
+      internalID: 4761120676506112107
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixel-art-pickaxe-illustration-for-retro-game-design-vector_0: -2567422538402743432
+      983701b3-0596-4592-9f22-0cb5cef8519a_0: 4761120676506112107
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

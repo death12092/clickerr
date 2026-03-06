@@ -1,18 +1,17 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class storeupgrtade : MonoBehaviour
+public class employeeupgrade : MonoBehaviour
 {
     public TMP_Text pricetext;
     public TMP_Text incomeinfotext;
-   
-   public GameManager gamemanager;
+
+    public GameManager gamemanager;
 
     public int startprice = 5;
     public float upgradePriceMultiplyer = 1.25f;
     public float rocksPerupgrade = 1.0f;
-    int levle = 0;
+    public int levle = 0;
     public bool active;
 
     private int CalculatePrice()
@@ -31,11 +30,12 @@ public class storeupgrtade : MonoBehaviour
     }
     public void Update()
     {
-        
+
     }
 
     void updateui()
     {
+        Debug.Log("Updating");
         pricetext.text = CalculatePrice().ToString();
         incomeinfotext.text = levle.ToString() + "x" + rocksPerupgrade + "/s";
 
@@ -50,50 +50,11 @@ public class storeupgrtade : MonoBehaviour
             levle++;
             updateui();
         }
-    }
-
-    public void ActivateDrill()
-    {
-
-        StartCoroutine(DelayedCounter());
-    }
-    public void Drill()
-    {
-        active = true;
-        StartCoroutine(Drilling());
-    }
-
-    IEnumerator DelayedCounter()
-    {
-        float activetime = 9f;
-        yield return new WaitForSeconds(activetime);
         
-        active = false;
-        if(levle >= 20)
-        {
-            activetime = activetime + 10f;
-        }
-        if (levle >= 100)
-        {
-            Drill();
-        }
     }
-    IEnumerator Drilling()
+    public void activate()
     {
-        ActivateDrill();
-        do
-        {
-            yield return new WaitForSeconds(1f);
-            
-            gamemanager.count = gamemanager.count + levle;
-            gamemanager.UpdateUI();
-            
-        } while (active);
-
-
-
-
+        gamemanager.count = gamemanager.count + (10 * levle);
+        gamemanager.UpdateUI();
     }
-
 }
-

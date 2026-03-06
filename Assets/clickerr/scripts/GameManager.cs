@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Runtime.InteropServices;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +12,9 @@ public class GameManager : MonoBehaviour
     float nexttimecheck = 1f;
     [SerializeField] storeupgrtade[] storeupgrade;
     [SerializeField] TMP_Text Incometext;
+    [SerializeField] public picklevel[] picklevel;
+    [SerializeField] public employeeupgrade employee;
+    [SerializeField] public manager manager;
 
     private void Start()
     {
@@ -18,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void ClickAction()
     {
-        count++;
+        count = count + picklevel[0].levle;
         
         UpdateUI();
 
@@ -47,6 +52,8 @@ public class GameManager : MonoBehaviour
         {
             idlecalculator();
             nexttimecheck = Time.timeSinceLevelLoad + (1f / updatespersec);
+
+            mangeing();
         }
         
     }
@@ -61,5 +68,21 @@ public class GameManager : MonoBehaviour
         }
         Incometext.text = sum.ToString() + "/s";
         count += sum / updatespersec;
+    }
+
+    public IEnumerator mangeing()
+    {
+        Debug.Log("work");
+        if (employee.levle > 0)
+        {
+            Debug.Log("works");
+            if (manager.levle > 0)
+            {
+                Debug.Log("working");
+                float activetime = 9f;
+                yield return new WaitForSeconds(activetime);
+                employee.activate();
+            }
+        }
     }
 }
