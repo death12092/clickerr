@@ -1,11 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class manager : MonoBehaviour
 {
     public TMP_Text pricetext;
     public TMP_Text incomeinfotext;
-
+    public  GameObject clockin;
     public GameManager gamemanager;
 
     public int startprice = 5;
@@ -51,6 +52,7 @@ public class manager : MonoBehaviour
         }
         gamemanager.UpdateUI();
         Destroy(this.gameObject);
+        Destroy(this.clockin);
 
     }
 
