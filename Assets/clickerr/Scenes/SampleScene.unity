@@ -443,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pricetext: {fileID: 314016158}
   incomeinfotext: {fileID: 1535248558}
+  clockin: {fileID: 0}
   gamemanager: {fileID: 425078196}
   startprice: 600
   upgradePriceMultiplyer: 1.25
